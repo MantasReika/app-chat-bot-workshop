@@ -96,42 +96,8 @@ $data = [
         'id' => $sender,
     ],
     'message' => [
-        'text' => htmlspecialchars_decode($message),
+        'text' => htmlspecialchars_decode($message, ENT_QUOTES),
     ]
 ];
-
-// TODO: if person hasnt started a game then donot send button response.
-// $data = [
-//     'messaging_type' => 'RESPONSE',
-//     'recipient' => [
-//         'id' => $sender,
-//     ],
-//     'message' => [
-//       "attachment" => [
-//         "type" => "template",
-//         "payload" => [
-//           "template_type" => "button",
-//           "text" => $message,
-//           "buttons" => [
-//             [
-//               "type" => "web_url",
-//               "url" => "https => //www.messenger.com",
-//               "title" => "Visit Messenger1"
-//             ],
-//             [
-//               "type" => "web_url",
-//               "url" => "https => //www.messenger.com",
-//               "title" => "Visit Messenger2"
-//             ],
-//             [
-//               "type" => "web_url",
-//               "url" => "https => //www.messenger.com",
-//               "title" => "Visit Messenger3"
-//             ]
-//           ]
-//         ]
-//       ]
-//     ]
-//   ];
 
 $response = $fb->post('/me/messages', $data, $access_token);

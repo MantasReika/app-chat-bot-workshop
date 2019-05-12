@@ -39,7 +39,6 @@
 
     public function getIncorrectAnswers(){
       return $this->apiResponse["incorrect_answers"];
-      // return json_decode($this->apiResponse["incorrect_answers"]);
     }
 
     public function getCorrectAnswerNr(){

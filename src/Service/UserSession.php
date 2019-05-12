@@ -90,19 +90,10 @@
     }
 
     public function checkAnswer($userGuess) {
-      $boolTrueAnswersVariants = array("yes", "yup", "yeah", "mhm", "maybe");
-      $boolFalseAnswersVariants = array("no", "neup", "nope", "fake", "false");
-
       if ($userGuess == $this->getCorrectAnswerNr()) {
         return true;
       }
       else if (strtolower($userGuess) == strtolower($this->getCorrectAnswer())) {
-        return true;
-      }
-      else if (in_array($boolTrueAnswersVariants) && strtolower($this->getCorrectAnswer()) == "true"){
-        return true;
-      }
-      elseif (in_array($boolFalseAnswersVariants) && strtolower($this->getCorrectAnswer()) == "false"){
         return true;
       }
       else {
