@@ -15,12 +15,6 @@ $verify_token = $configProvider->getParameter("verify_token");
 $appId = $configProvider->getParameter("app_id");
 $appSecret = $configProvider->getParameter("app_secret");
 
-// $access_token = 'EAAIkcNqpIeYBAH0dOakSRUnmhcsBU8kwrOllTm1lKz8fF7vNTn5zEqX1FCvKQY9Pfu4ouw1lnodqFYP1SgL4P6y2eYoxxlLfPZBxfd9f3IKpPDBXs53AwZAwTDJZALPUaqqGVITyAIJzq8HOePvj9cVwZB6qZCbe1TauSze6iG9SBRZAq61ncL';
-// $verify_token = 'TOKEN';
-// $appId = '603017076875750';
-// $appSecret = 'd0bea5b778ce847279cafffbaf439432';
-
-
 if(isset($_REQUEST['hub_challenge'])) {
     $challenge = $_REQUEST['hub_challenge'];
     if ($_REQUEST['hub_verify_token'] === $verify_token) {
