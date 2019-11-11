@@ -1,4 +1,6 @@
-## Paysera Chat Bot Workshop
+## Chat Bot Workshop
+
+Facebook ChatBot that was created during the Paysera workshop.
 
 ### Requirements
  * `PHP >=5.5`
